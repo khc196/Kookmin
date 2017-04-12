@@ -1,0 +1,27 @@
+#include <iostream>
+//#include "vec2.hpp"
+//#include "vec3.hpp"
+
+//using kmuvcl::math::vec2f;
+//using kmuvcl::math::vec3f;
+
+#include "vec.hpp"
+#include "mat.hpp"
+#include "transform.hpp"
+using namespace kmuvcl::math;
+using namespace std;
+//using kmuvcl::math::vec2f;
+//using kmuvcl::math::vec3f;
+//using kmuvcl::math::mat3x3f;
+
+//typedef kmuvcl::math::mat<3, 2, float> mat3x2f;
+//typedef kmuvcl::math::mat<2, 3, float> mat2x3f;
+
+int main() {
+	vec4f v_a(1.0f, 0.0f, 0.0f, 0.0f);
+	mat4x4f m_a = rotate(90.0f, 0.0f, 0.0f, 10.0f);
+	cout << m_a;
+	vec4f v_b = m_a * v_a;
+	cout << v_b << endl;
+	return 0;
+}
